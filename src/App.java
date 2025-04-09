@@ -1,3 +1,4 @@
+
 /**
  * You are going to write code that is designed to store student ID numbers.
  * You will create an ArrayList for Integers, then accept user input to add values 
@@ -24,8 +25,30 @@
  */
 
 import java.util.*;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+       
+        while (true) {
+            int ID = Integer.valueOf(reader.nextLine());
+            if (ID == -1) {
+                break;
+            }
+
+            numbers.add(ID);
+         
+        }
+
+        
+
+
+        int position = 0;
+        while (position < numbers.size()) { // 4
+            System.out.println(numbers.get(position));
+            position++;
+        }
     }
 }
